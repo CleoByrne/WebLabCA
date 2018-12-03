@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 class Page extends Component {
     render() {
         return (
-            <div>
+            <div className="page">
                 {/* Content to output*/}
                 <Meta />
                 <Header />
@@ -18,7 +18,16 @@ class Page extends Component {
                 {/* Render props passed to this Component */}
                 {this.props.children}
                 <Footer />
-            </div>
+                <style jsx> {`
+                    .page{
+                        background-color:#004d4d; 
+                        padding:0.2em,0.2em,0em,0.2em;
+                        
+                    }
+                    
+            
+                 `}</style>
+            </div> 
         );
     }
 }

@@ -12,6 +12,13 @@ app.prepare()
 .then(() => {
   const server = express()
 
+  server.get('/article/:id', (req, res) => {
+    const actualPage = '/article'
+    const queryParams = { title: req.params.id, source: req.params.defaultNewsSource } 
+    //const queryParams = { title: req.params.id, source: req.params.defaultNewsSource } 
+    app.render(req, res, actualPage, queryParams)
+  })
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })

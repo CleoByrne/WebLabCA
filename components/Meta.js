@@ -1,6 +1,6 @@
-// This component is is used to customise the HTML head section
 import Head from 'next/head';
 
+import fetch from 'isomorphic-unfetch';
 const Meta = () => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
